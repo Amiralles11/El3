@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="240" prefWidth="320" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entrega3.CeldaController">
+   <children>
+      <AnchorPane prefHeight="181.0" prefWidth="320.0">
+         <children>
+            <Label fx:id="recurso1" layoutX="15.0" layoutY="86.0" prefHeight="72.0" prefWidth="290.0">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="individuo1" layoutX="14.0" layoutY="14.0" prefHeight="72.0" prefWidth="290.0">
+               <font>
+                  <Font name="Britannic Bold" size="15.0" />
+               </font></Label>
+            <MenuButton layoutX="21.0" layoutY="165.0" mnemonicParsing="false" prefWidth="279.0" text="Añadir elemento">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <ButtonBar prefHeight="40.0" prefWidth="259.0">
+                           <buttons>
+                              <MenuButton mnemonicParsing="false" text="Individuo">
+                                <items>
+                                  <MenuItem fx:id="AñadirIndividuoBasico" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Básico">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                  <MenuItem fx:id="AñadirIndividuoNormal" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Normal">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirIndividuoAvanzado" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Avanzado">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                </items>
+                                 <font>
+                                    <Font name="Britannic Bold" size="16.0" />
+                                 </font>
+                              </MenuButton>
+                              <MenuButton mnemonicParsing="false" text="Recurso">
+                                <items>
+                                    <MenuItem fx:id="AñadirRecursoAgua" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Agua">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirRecursoComida" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Comida">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirRecursoMontaña" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Montaña">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirRecursoTesoro" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Tesoro">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirRecursoBiblioteca" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Biblioteca">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem fx:id="AñadirRecursoPozo" mnemonicParsing="false">
+                                       <graphic>
+                                          <Label text="Pozo">
+                                             <font>
+                                                <Font name="Britannic Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </MenuItem>
+                                </items>
+                                 <font>
+                                    <Font name="Britannic Bold" size="17.0" />
+                                 </font>
+                              </MenuButton>
+                           </buttons>
+                        </ButtonBar>
+                     </graphic></MenuItem>
+              </items>
+               <font>
+                  <Font name="Britannic Bold" size="28.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

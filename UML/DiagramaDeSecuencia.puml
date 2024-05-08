@@ -1,0 +1,34 @@
+@startuml
+hide footbox
+
+actor Jugador
+
+participant "Ventana Principal" as Principal
+participant "Ventana Opciones" as Opciones
+participant "Ventana Ajustes" as Ajustes
+participant "Tablero" as Tablero
+participant "Bucle de Control" as Control
+
+Jugador -> Principal: Abrir juego
+Principal -> Principal: Mostrar opciones
+Jugador -> Principal: Seleccionar 'Nueva Partida'
+Principal -> Opciones: Mostrar ventana de opciones
+Jugador -> Opciones: Cambiar opciones
+Opciones -> Opciones: Procesar cambios
+Opciones -> Ajustes: Mostrar ventana de ajustes
+Jugador -> Ajustes: Ajustar parámetros
+Ajustes -> Ajustes: Procesar ajustes
+Ajustes -> Opciones: Volver a ventana de opciones
+Opciones -> Principal: Cargar opciones
+Principal -> Tablero: Crear tablero
+Control -> Tablero: Iniciar bucle de control
+Jugador -> Tablero: Interactuar con botones
+Tablero -> Control: Pausar juego
+Control -> Tablero: Continuar bucle de control
+Jugador -> Tablero: Interactuar con botones
+Tablero -> Control: Terminar juego
+Control -> Principal: Finalizar juego
+Principal -> Principal: Mostrar opciones
+
+@enduml
+

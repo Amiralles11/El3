@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="720" prefWidth="960" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entrega3.TableroController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="544.0" prefHeight="104.0" prefWidth="960.0">
+         <children>
+            <Label layoutX="63.0" layoutY="7.0" text="Turnos:">
+               <font>
+                  <Font name="Britannic Bold" size="92.0" />
+               </font>
+            </Label>
+            <Label layoutX="424.0" layoutY="7.0" prefHeight="60.0" prefWidth="47.0" text="--">
+               <font>
+                  <Font name="Britannic Bold" size="92.0" />
+               </font>
+            </Label>
+            <Button layoutX="614.0" layoutY="11.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="198.0" text="Guia">
+               <font>
+                  <Font name="Britannic Bold" size="50.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="461.0" prefWidth="200.0">
+         <children>
+            <GridPane fx:id="tableroDeJuego">
+            </GridPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="104.0" prefWidth="960.0">
+         <children>
+            <Button layoutX="37.0" layoutY="22.0" mnemonicParsing="false" text="Configuración">
+               <font>
+                  <Font name="Britannic Bold" size="35.0" />
+               </font>
+            </Button>
+            <Button layoutX="331.0" layoutY="22.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" text="&gt;&gt;">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="426.0" layoutY="22.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" text="&gt;">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="521.0" layoutY="22.0" mnemonicParsing="false" prefHeight="60.0" text="I I">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="616.0" layoutY="22.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="65.0" text="+">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Button>
+            <Button layoutX="710.0" layoutY="22.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="216.0" text="Guardar">
+               <font>
+                  <Font name="Britannic Bold" size="35.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

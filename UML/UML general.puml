@@ -1,0 +1,74 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+Interface Elemento {
++make turn()
+}
+
+abstract class Recurso extends Elemento {
+-tiempoAparicion:int
+-porcentajeAparicion:int
++accion():
+}
+abstract class Individuo extends Elemento{
+-progenitor1:Individuo
+-progenitor2:Individuo
+-id:int
+-vidasRestantes:int
+-reproduccion%:int
+-mutacion%:int
+-clonacion%:int
+-muerte%:int
+-edad:int
+-aguaBebida:int
+-reproducciones:int
+-mutaciones:int
+----
++mover()
+}
+class IndividuoBasico extends Individuo{
++mover():void
+}
+
+class IndividuoNormal extends Individuo{
++mover():void
+}
+
+class IndividuoAvanzado extends Individuo{
++mover():void
+}
+class Agua extends Recurso {
+}
+class Comida extends Recurso {
+}
+class Montaña extends Recurso {
+}
+class Tesoro extends Recurso {
+}
+class Biblioteca extends Recurso {
+}
+class Pozo extends Recurso {
+}
+class Simulador{
+-tablero:Tablero
++ iniciar_juego()
++ cargar_juego()
++ pausar_juego()
++ detener_juego()
++ guardar_juego()
+}
+
+class Tablero(Lista) extends Simulador{
+-dimensiones:int[2]
+-Celdas:Celda[]
+ + obtener_celda(coordenadas)
+}
+
+class Celda(Nodo){
+-coordenadas:int[2]
+-Elementos:Elemento[]
++ agregar_elemento(elemento)
++ quitar_elemento(elemento)
+
+}
+
+@enduml
