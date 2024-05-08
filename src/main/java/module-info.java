@@ -12,6 +12,6 @@ module com.example.juegodelavida1 {
     requires com.almasb.fxgl.all;
     requires org.apache.logging.log4j;
 
-    opens com.example.entrega3 to javafx.fxml;
-    exports com.example.entrega3;
+    opens com.example.EL3 to javafx.fxml;
+    exports com.example.EL3;
 }

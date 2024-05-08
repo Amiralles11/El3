@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="720" prefWidth="960" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.EL3.ParameterController">
+   <children>
+      <Label prefHeight="94.0" prefWidth="482.0" text="Parametros" textAlignment="CENTER">
+         <font>
+            <Font name="Britannic Bold" size="92.0" />
+         </font>
+      </Label>
+      <Label />
+      <TabPane prefHeight="442.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Individuos">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <Label layoutX="274.0" layoutY="38.0" prefHeight="36.0" prefWidth="75.0" text="Vidas">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="110.0" layoutY="104.0" prefHeight="36.0" prefWidth="240.0" text="Reproducción (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="160.0" layoutY="170.0" prefHeight="36.0" prefWidth="189.0" text="Clonación (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="236.0" prefHeight="36.0" prefWidth="327.0" text="Tipo al reproducirse (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="sliderVidas" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="435.0" layoutY="46.0" majorTickUnit="20.0" min="1.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="20.0" />
+                        <Slider fx:id="sliderPorcentajeReproduccion" layoutX="435.0" layoutY="112.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeClonacion" layoutX="435.0" layoutY="179.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+                        <Slider fx:id="sliderPorcentajeTipoAlReproducirse" layoutX="435.0" layoutY="245.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="80.0" />
+                        <Button layoutX="366.0" layoutY="43.0" mnemonicParsing="false" onAction="#ButtonGuiaVidas" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="109.0" mnemonicParsing="false" onAction="#ButtonGuiaReproduccion" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="175.0" mnemonicParsing="false" onAction="#ButtonGuiaClonacion" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="241.0" mnemonicParsing="false" onAction="#ButtonGuiaTipo" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button alignment="TOP_CENTER" layoutX="244.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonReiniciarClick" prefHeight="51.0" prefWidth="205.0" text="Restablecer">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="TOP_CENTER" layoutX="528.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonGuardarClick" prefHeight="51.0" prefWidth="190.0" text="Guardar">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="ValorSliderVidas" layoutX="871.0" layoutY="41.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPReproduccion" layoutX="871.0" layoutY="107.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPClonacion" layoutX="871.0" layoutY="173.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPTipo" layoutX="871.0" layoutY="239.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text=" Recursos ">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="120.0" layoutY="26.0" text="Tiempo de aparición">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="247.0" layoutY="114.0" text="Agua (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="58.0" layoutY="64.0" text="Probabilidad de aparición">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="147.0" text="Comida (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="366.0" layoutY="114.0" mnemonicParsing="false" onAction="#ButtonGuiaAgua" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="248.0" mnemonicParsing="false" onAction="#ButtonGuiaBiblioteca" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="64.0" mnemonicParsing="false" onAction="#ButtonGuiaPropabilidadAparicion" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="26.0" mnemonicParsing="false" onAction="#ButtonGuiaTiempoAparicion" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button alignment="TOP_CENTER" layoutX="244.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonReiniciarClick2" prefHeight="51.0" prefWidth="205.0" text="Restablecer">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="TOP_CENTER" layoutX="528.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonGuardarClick2" prefHeight="51.0" prefWidth="190.0" text="Guardar">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="366.0" layoutY="147.0" mnemonicParsing="false" onAction="#ButtonGuiaComida" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="181.0" mnemonicParsing="false" onAction="#ButtonGuiaMontaña" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="214.0" mnemonicParsing="false" onAction="#ButtonGuiaTesoro" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Button layoutX="366.0" layoutY="283.0" mnemonicParsing="false" onAction="#ButtonGuiaPozo" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Separator layoutX="-36.0" layoutY="98.0" prefHeight="18.0" prefWidth="976.0" />
+                        <Label alignment="TOP_RIGHT" layoutX="207.0" layoutY="181.0" text="Montaña (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="227.0" layoutY="214.0" text="Tesoro (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="193.0" layoutY="248.0" text="Biblioteca (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="250.0" layoutY="281.0" text="Pozo (%)">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="sliderTiempoAparicion" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="29.0" majorTickUnit="20.0" min="1.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="20.0" />
+                        <Slider fx:id="sliderPorcentajeAparicion" layoutX="423.0" layoutY="67.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionAgua" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="117.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionPozo" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="286.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionBiblioteca" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="251.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionTesoro" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="218.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionMontaña" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="184.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Slider fx:id="sliderPorcentajeAparicionComida" accessibleRole="IMAGE_VIEW" blockIncrement="20.0" layoutX="423.0" layoutY="150.0" majorTickUnit="20.0" prefHeight="20.0" prefWidth="400.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+                        <Label fx:id="ValorTiempoAparicion" layoutX="846.0" layoutY="24.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionComida" layoutX="846.0" layoutY="145.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionAgua" layoutX="846.0" layoutY="110.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicion" layoutX="846.0" layoutY="62.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionTesoro" layoutX="846.0" layoutY="212.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionMontaña" layoutX="846.0" layoutY="179.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionBiblioteca" layoutX="846.0" layoutY="247.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorSliderPorcentajeAparicionPozo" layoutX="846.0" layoutY="281.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text=" Tablero  ">
+              <content>
+                <AnchorPane>
+                     <children>
+                        <Button layoutX="366.0" layoutY="99.0" mnemonicParsing="false" onAction="#ButtonGuiaFilas" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Label layoutX="284.0" layoutY="97.0" text="Filas">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="213.0" layoutY="183.0" text="Columnas">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="TOP_CENTER" layoutX="244.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonReiniciarClick3" prefHeight="51.0" prefWidth="205.0" text="Restablecer">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="TOP_CENTER" layoutX="528.0" layoutY="348.0" mnemonicParsing="false" onAction="#onBotonGuardarClick3" prefHeight="51.0" prefWidth="190.0" text="Guardar">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="366.0" layoutY="184.0" mnemonicParsing="false" onAction="#ButtonGuiaColumnas" prefHeight="26.0" prefWidth="31.0" text="?" />
+                        <Slider fx:id="sliderFilas" layoutX="435.0" layoutY="102.0" majorTickUnit="5.0" max="20.0" min="1.0" minorTickCount="5" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+                        <Slider fx:id="sliderColumnas" layoutX="435.0" layoutY="188.0" majorTickUnit="10.0" max="50.0" min="1.0" minorTickCount="5" prefWidth="400.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+                        <Label fx:id="ValorFilas" layoutX="871.0" layoutY="97.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ValorColumnas" layoutX="871.0" layoutY="183.0" text="--">
+                           <font>
+                              <Font name="Britannic Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button mnemonicParsing="false" onAction="#ButtonOnClickTablero" prefHeight="66.0" prefWidth="294.0" text="Tablero">
+         <font>
+            <Font name="Britannic Bold" size="39.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
